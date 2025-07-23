@@ -1,4 +1,12 @@
+# Node Modules
 node_modules
+
+# Build folder
 dist
+
+# Environment variables
 .env
+
+# ESLint
 eslint-report.json
+.eslintcache
