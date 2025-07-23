@@ -11,8 +11,8 @@ export class SynonymGraph {
    * @param b - The second word
    */
   addSynonymPair(a: string, b: string) {
-    const word1 = a.toLocaleLowerCase();
-    const word2 = b.toLocaleLowerCase();
+    const word1 = a.trim().toLocaleLowerCase();
+    const word2 = b.trim().toLocaleLowerCase();
 
     if (!this.graph.has(word1)) this.graph.set(word1, new Set());
     if (!this.graph.has(word2)) this.graph.set(word2, new Set());
