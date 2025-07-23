@@ -5,6 +5,11 @@ export class SynonymGraph {
     this.graph = new Map();
   }
 
+  /**
+   * Add a synonym pair to the graph
+   * @param a - The first word
+   * @param b - The second word
+   */
   addSynonymPair(a: string, b: string) {
     const word1 = a.toLocaleLowerCase();
     const word2 = b.toLocaleLowerCase();
@@ -16,6 +21,11 @@ export class SynonymGraph {
     this.graph.get(word2)?.add(word1);
   }
 
+  /**
+   * Get all synonyms for a word
+   * @param word - The word to get synonyms for
+   * @returns An array of synonyms
+   */
   getSynonyms(word: string) {
     word = word.toLowerCase().trim();
     if (!this.graph.has(word)) return [];
