@@ -10,3 +10,6 @@ dist
 # ESLint
 eslint-report.json
 .eslintcache
+
+# Typescript Coverage
+./coverage
