@@ -46,7 +46,7 @@ export class SynonymGraph {
       }
     }
 
-    visited.delete(word); // don't include the original word
+    visited.delete(word);
     return Array.from(visited);
   }
 }
