@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --hostname app.eticket.local",
+    "dev": "next dev",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:coverage:ui": "vitest run --coverage --coverage.enabled=true",
@@ -21,7 +21,8 @@
     "axios": "^1.11.0",
     "next": "15.4.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-toastify": "^11.0.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
