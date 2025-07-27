@@ -4,9 +4,10 @@ import { useCallback, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
+import buildClient from "@/api/buildClient";
+import { mapErrors } from "@/utils/mapErrors";
+
 import styles from "./page.module.css";
-import buildClient from "../../api/buildClient";
-import { mapErrors } from "../../utils/mapErrors";
 
 const client = buildClient();
 
@@ -44,18 +45,18 @@ export default function SynonymsPage() {
       <h1 className={styles.title}>
         Add a <span className={styles.highlight}>new</span> Synonym
       </h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
           <input
+            className={styles.input}
             id="word"
+            placeholder="Enter a word"
             type="text"
             value={word}
             onChange={(e) => {
               setWord(e.target.value);
               setErrors((prev) => ({ ...prev, word: [] }));
             }}
-            className={styles.input}
-            placeholder="Enter a word"
           />
           {errors.word && (
             <div className={styles.error}>{errors.word.join(", ")}</div>
@@ -63,15 +64,15 @@ export default function SynonymsPage() {
         </div>
         <div className={styles.inputGroup}>
           <input
+            className={styles.input}
             id="synonym"
+            placeholder="Enter a synonym"
             type="text"
             value={synonym}
             onChange={(e) => {
               setSynonym(e.target.value);
               setErrors((prev) => ({ ...prev, synonym: [] }));
             }}
-            className={styles.input}
-            placeholder="Enter a synonym"
           />
           {errors.synonym && (
             <div className={styles.error}>{errors.synonym.join(", ")}</div>
@@ -80,7 +81,7 @@ export default function SynonymsPage() {
         {errors.general && (
           <div className={styles.error}>{errors.general.join(", ")}</div>
         )}
-        <button type="submit" className={styles.button}>
+        <button className={styles.button} type="submit">
           Add Synonym
         </button>
       </form>
