@@ -1,0 +1,49 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomePage > It should render and match a snapshot by default 1`] = `
+<body>
+  <div>
+    <main
+      class="_main_6b97ca"
+    >
+      <div
+        class="_content_6b97ca"
+      >
+        <h1
+          class="_title_6b97ca"
+        >
+          Welcome to 
+          <span
+            class="_highlight_6b97ca"
+          >
+            Synonymo
+          </span>
+        </h1>
+        <p
+          class="_description_6b97ca"
+        >
+          The fun and easy way to build your vocabulary. Add new words and discover their synonyms, or search for existing ones to expand your lexicon.
+        </p>
+        <div
+          class="_ctaContainer_6b97ca"
+        >
+          <a
+            class="_ctaButton_6b97ca"
+            href="/synonyms"
+            id="addSynonymsLink"
+          >
+            Add Synonyms
+          </a>
+          <a
+            class="_ctaButtonSecondary_6b97ca"
+            href="/synonyms/search"
+            id="searchSynonymsLink"
+          >
+            Search Synonyms
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+`;
