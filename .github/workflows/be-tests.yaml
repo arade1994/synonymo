@@ -1,4 +1,4 @@
-name: "[Backend] - Unit Tests and Coverage"
+name: "[Server] - Unit Tests and Coverage"
 
 on:
   pull_request:
@@ -18,13 +18,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: cd backend && npm install
+        run: cd apps/server && npm install
 
       - name: Run Unit Tests with Coverage
-        run: cd backend && npm run test:coverage
+        run: cd apps/server && npm run test:coverage
 
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: test-coverage-report
-          path: ./backend/coverage/coverage-final.json
+          path: ./apps/server/coverage/coverage-final.json

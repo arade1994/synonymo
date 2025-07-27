@@ -1,4 +1,4 @@
-name: "[Backend] - ESLint"
+name: "[Server] - ESLint"
 
 on:
   pull_request:
@@ -18,13 +18,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: cd backend && npm install
+        run: cd apps/server && npm install
 
       - name: Run ESLint
-        run: cd backend && npm run lint:eslint
+        run: cd apps/server && npm run lint:eslint
 
       - name: Upload ESLint Report
         uses: actions/upload-artifact@v4
         with:
           name: eslint-report
-          path: backend/eslint-report.json
+          path: server/eslint-report.json

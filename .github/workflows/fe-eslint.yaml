@@ -1,4 +1,4 @@
-name: "[Frontend] - ESLint"
+name: "[Web] - ESLint"
 
 on:
   pull_request:
@@ -18,13 +18,13 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: cd frontend && npm install
+        run: cd apps/web && npm install
 
       - name: Run ESLint
-        run: cd frontend && npm run lint:ci
+        run: cd apps/web && npm run lint:ci
 
       - name: Upload ESLint Report
         uses: actions/upload-artifact@v4
         with:
           name: eslint-report
-          path: frontend/eslint-report.json
+          path: apps/web/eslint-report.json

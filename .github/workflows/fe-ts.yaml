@@ -1,4 +1,4 @@
-name: "[Frontend] - TypeScript"
+name: "[Web] - TypeScript"
 
 on:
   pull_request:
@@ -18,10 +18,10 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: cd frontend && npm install
+        run: cd apps/web && npm install
 
       - name: Run TypeScript checks
-        run: cd frontend && npm run type-check
+        run: cd apps/web && npm run type-check
 
       - name: Run TypeScript Coverage
-        run: cd frontend && npm run ts-coverage
+        run: cd apps/web && npm run ts-coverage
