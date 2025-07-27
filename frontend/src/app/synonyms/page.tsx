@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
@@ -42,6 +43,9 @@ export default function SynonymsPage() {
 
   return (
     <main className={styles.main}>
+      <Link className={styles.homeLink} href="/">
+        &larr; Back to Home
+      </Link>
       <h1 className={styles.title}>
         Add a <span className={styles.highlight}>new</span> Synonym
       </h1>
