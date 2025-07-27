@@ -15,16 +15,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: cd apps/server && npm install
+        run: pnpm install
 
       - name: Run Unit Tests with Coverage
-        run: cd apps/server && npm run test:coverage
+        run: pnpm --filter server run test:coverage
 
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
         with:
           name: test-coverage-report
-          path: ./apps/server/coverage/coverage-final.json
+          path: apps/server/coverage/coverage-final.json

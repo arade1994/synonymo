@@ -15,16 +15,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: "pnpm"
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: cd apps/server && npm install
+        run: pnpm install
 
       - name: Run ESLint
-        run: cd apps/server && npm run lint:eslint
+        run: pnpm --filter server run lint:eslint
 
       - name: Upload ESLint Report
         uses: actions/upload-artifact@v4
         with:
           name: eslint-report
-          path: server/eslint-report.json
+          path: apps/server/eslint-report.json

@@ -15,13 +15,16 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install dependencies
-        run: cd apps/server && npm install
+        run: pnpm install
 
       - name: Run TypeScript checks
-        run: cd apps/server && npm run type-check
+        run: pnpm --filter server run type-check
 
       - name: Run TypeScript Coverage
-        run: cd apps/server && npm run ts-coverage
+        run: pnpm --filter server run ts-coverage
