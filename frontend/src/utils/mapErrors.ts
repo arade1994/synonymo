@@ -1,4 +1,4 @@
-interface IApiError {
+export interface IApiError {
   message: string;
   field: string;
 }

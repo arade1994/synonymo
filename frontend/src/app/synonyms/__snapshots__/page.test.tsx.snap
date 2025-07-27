@@ -1,0 +1,63 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
+<body>
+  <div>
+    <main
+      class="_main_4ac91f"
+    >
+      <a
+        class="_homeLink_4ac91f"
+        href="/"
+        id="homeLink"
+      >
+        ← Back to Home
+      </a>
+      <h1
+        class="_title_4ac91f"
+      >
+        Add a 
+        <span
+          class="_highlight_4ac91f"
+        >
+          new
+        </span>
+         Synonym
+      </h1>
+      <form
+        class="_form_4ac91f"
+      >
+        <div
+          class="_inputGroup_4ac91f"
+        >
+          <input
+            class="_input_4ac91f"
+            id="wordInput"
+            placeholder="Enter a word"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="_inputGroup_4ac91f"
+        >
+          <input
+            class="_input_4ac91f"
+            id="synonymInput"
+            placeholder="Enter a synonym"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="_button_4ac91f"
+          id="addSynonymButton"
+          type="submit"
+        >
+          Add Synonym
+        </button>
+      </form>
+    </main>
+  </div>
+</body>
+`;

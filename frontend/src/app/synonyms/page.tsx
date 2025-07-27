@@ -43,7 +43,7 @@ export default function SynonymsPage() {
 
   return (
     <main className={styles.main}>
-      <Link className={styles.homeLink} href="/">
+      <Link className={styles.homeLink} href="/" id="homeLink">
         &larr; Back to Home
       </Link>
       <h1 className={styles.title}>
@@ -53,7 +53,7 @@ export default function SynonymsPage() {
         <div className={styles.inputGroup}>
           <input
             className={styles.input}
-            id="word"
+            id="wordInput"
             placeholder="Enter a word"
             type="text"
             value={word}
@@ -69,7 +69,7 @@ export default function SynonymsPage() {
         <div className={styles.inputGroup}>
           <input
             className={styles.input}
-            id="synonym"
+            id="synonymInput"
             placeholder="Enter a synonym"
             type="text"
             value={synonym}
@@ -85,7 +85,7 @@ export default function SynonymsPage() {
         {errors.general && (
           <div className={styles.error}>{errors.general.join(", ")}</div>
         )}
-        <button className={styles.button} type="submit">
+        <button className={styles.button} id="addSynonymButton" type="submit">
           Add Synonym
         </button>
       </form>

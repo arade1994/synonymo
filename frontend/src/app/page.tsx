@@ -15,10 +15,18 @@ export default function Home() {
           lexicon.
         </p>
         <div className={styles.ctaContainer}>
-          <Link className={styles.ctaButton} href="/synonyms">
+          <Link
+            className={styles.ctaButton}
+            href="/synonyms"
+            id="addSynonymsLink"
+          >
             Add Synonyms
           </Link>
-          <Link className={styles.ctaButtonSecondary} href="/synonyms/search">
+          <Link
+            className={styles.ctaButtonSecondary}
+            href="/synonyms/search"
+            id="searchSynonymsLink"
+          >
             Search Synonyms
           </Link>
         </div>

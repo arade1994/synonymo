@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchSynonymsPage > It should render and match a snapshot by default 1`] = `
+<body>
+  <div>
+    <main
+      class="_main_8812a5"
+    >
+      <a
+        class="_homeLink_8812a5"
+        href="/"
+        id="homeLink"
+      >
+        ← Back to Home
+      </a>
+      <h1
+        class="_title_8812a5"
+      >
+        Search for Synonyms
+      </h1>
+      <p>
+        Search functionality coming soon!
+      </p>
+    </main>
+  </div>
+</body>
+`;
