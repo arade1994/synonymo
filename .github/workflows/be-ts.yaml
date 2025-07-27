@@ -1,4 +1,4 @@
-name: "[Backend] - TypeScript"
+name: "[Server] - TypeScript"
 
 on:
   pull_request:
@@ -11,17 +11,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.7.0
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        run: cd backend && npm install
+        run: pnpm install
 
       - name: Run TypeScript checks
-        run: cd backend && npm run type-check
+        run: pnpm --filter server run type-check
 
       - name: Run TypeScript Coverage
-        run: cd backend && npm run ts-coverage
+        run: pnpm --filter server run ts-coverage
