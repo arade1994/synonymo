@@ -48,27 +48,29 @@
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 
 .ctaButton {
   background: linear-gradient(90deg, #6c63ff, #4a42d9);
   color: white;
-}
 
-.ctaButton:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  &:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .ctaButtonSecondary {
   background: #fff;
   color: #6c63ff;
   border: 2px solid #6c63ff;
-}
 
-.ctaButtonSecondary:hover {
-  background: #6c63ff;
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.2);
+  &:hover {
+    background: #6c63ff;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(108, 99, 255, 0.2);
+  }
 }

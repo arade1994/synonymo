@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import buildClient from "@/api/buildClient";
 import { mapErrors } from "@/utils/mapErrors";
 
-import styles from "./page.module.css";
+import styles from "./page.module.scss";
 
 const client = buildClient();
 
