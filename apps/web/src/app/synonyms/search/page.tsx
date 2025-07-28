@@ -5,7 +5,11 @@ import Link from "next/link";
 import { toast } from "react-toastify";
 
 import buildClient from "@/api/buildClient";
+import Errors from "@/app/components/form/Errors/Errors";
+import Input from "@/app/components/form/Input/Input";
 import { mapErrors } from "@/utils/mapErrors";
+
+import SynonymList from "./components/SynonymList/SynonymList";
 
 import styles from "./page.module.scss";
 
@@ -14,6 +18,16 @@ export default function SearchSynonymsPage() {
   const [synonyms, setSynonyms] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string[]>>({});
+  const [showSynonyms, setShowSynonyms] = useState(false);
+
+  const handleChangeWord = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setWord(event.target.value);
+      setErrors((prev) => ({ ...prev, word: [] }));
+      setShowSynonyms(false);
+    },
+    []
+  );
 
   const fetchSynonyms = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
@@ -24,6 +38,7 @@ export default function SearchSynonymsPage() {
       try {
         const { data } = await buildClient().get(`/api/synonyms/${word || ""}`);
         setSynonyms(data.synonyms);
+        setShowSynonyms(true);
       } catch (error: any) {
         const errorData = error.response?.data?.errors;
         if (errorData) {
@@ -49,25 +64,15 @@ export default function SearchSynonymsPage() {
         Search <span className={styles.highlight}>for</span> Synonyms
       </h1>
       <form className={styles.form} onSubmit={fetchSynonyms}>
-        <div className={styles.inputGroup}>
-          <input
-            className={styles.input}
-            id="wordInput"
-            placeholder="Enter a word"
-            type="text"
-            value={word}
-            onChange={(e) => {
-              setWord(e.target.value);
-              setErrors((prev) => ({ ...prev, word: [] }));
-            }}
-          />
-          {errors.word && (
-            <div className={styles.error}>{errors.word.join(", ")}</div>
-          )}
-        </div>
-        {errors.general && (
-          <div className={styles.error}>{errors.general.join(", ")}</div>
-        )}
+        <Input
+          errors={errors.word}
+          id="wordInput"
+          placeholder="Enter a word"
+          type="text"
+          value={word}
+          onChange={handleChangeWord}
+        />
+        <Errors errors={errors.general} />
         <button
           className={styles.button}
           disabled={loading || !word}
@@ -77,19 +82,8 @@ export default function SearchSynonymsPage() {
           {loading ? "Searching..." : "Search"}
         </button>
       </form>
-      {synonyms.length > 0 && (
-        <div className={styles.synonyms}>
-          <h2>
-            Synonyms for <strong>{word}</strong>
-          </h2>
-          <ul>
-            {synonyms.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {errors.message && <div className={styles.error}>{errors.message}</div>}
+      {showSynonyms && <SynonymList items={synonyms} word={word} />}
+      <Errors errors={errors.message} />
     </main>
   );
 }

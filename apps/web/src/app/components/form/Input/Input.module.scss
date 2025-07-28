@@ -1,0 +1,22 @@
+.inputContainer {
+  position: relative;
+
+  & .input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #6c63ff;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+    }
+
+    &::placeholder {
+      color: #a0a0a0;
+    }
+  }
+}

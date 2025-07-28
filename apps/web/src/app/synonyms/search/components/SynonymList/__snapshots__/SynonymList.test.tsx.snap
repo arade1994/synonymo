@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SynonymList > It should match a snapshot when rendered by default with items 1`] = `
+<body>
+  <div>
+    <div
+      class="_synonyms_c0fc32"
+    >
+      <h2>
+        Synonyms for 
+        <strong>
+          test
+        </strong>
+      </h2>
+      <ul>
+        <li>
+          test2
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`SynonymList > It should match a snapshot when rendered by default with no items 1`] = `
+<body>
+  <div>
+    <div
+      class="_noSynonyms_c0fc32"
+    >
+      There are no synonyms for 
+      <strong>
+        test
+      </strong>
+    </div>
+  </div>
+</body>
+`;

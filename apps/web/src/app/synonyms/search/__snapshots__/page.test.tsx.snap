@@ -28,10 +28,10 @@ exports[`SearchSynonymsPage > It should render and match a snapshot by default 1
         class="_form_8812a5"
       >
         <div
-          class="_inputGroup_8812a5"
+          class="_inputContainer_18ce5e"
         >
           <input
-            class="_input_8812a5"
+            class="_input_18ce5e"
             id="wordInput"
             placeholder="Enter a word"
             type="text"

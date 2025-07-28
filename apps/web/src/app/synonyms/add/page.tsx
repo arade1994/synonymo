@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
 import buildClient from "@/api/buildClient";
+import Errors from "@/app/components/form/Errors/Errors";
+import Input from "@/app/components/form/Input/Input";
 import { mapErrors } from "@/utils/mapErrors";
 
 import styles from "./page.module.scss";
@@ -18,6 +20,22 @@ export default function SynonymsPage() {
   const [word, setWord] = useState("");
   const [synonym, setSynonym] = useState("");
   const [errors, setErrors] = useState<Record<string, string[]>>({});
+
+  const handleChangeWord = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setWord(event.target.value);
+      setErrors((prev) => ({ ...prev, word: [] }));
+    },
+    []
+  );
+
+  const handleChangeSynonym = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSynonym(event.target.value);
+      setErrors((prev) => ({ ...prev, synonym: [] }));
+    },
+    []
+  );
 
   const handleSubmit = useCallback(
     async (event: React.FormEvent) => {
@@ -50,41 +68,23 @@ export default function SynonymsPage() {
         Add a <span className={styles.highlight}>new</span> Synonym
       </h1>
       <form className={styles.form} onSubmit={handleSubmit}>
-        <div className={styles.inputGroup}>
-          <input
-            className={styles.input}
-            id="wordInput"
-            placeholder="Enter a word"
-            type="text"
-            value={word}
-            onChange={(e) => {
-              setWord(e.target.value);
-              setErrors((prev) => ({ ...prev, word: [] }));
-            }}
-          />
-          {errors.word && (
-            <div className={styles.error}>{errors.word.join(", ")}</div>
-          )}
-        </div>
-        <div className={styles.inputGroup}>
-          <input
-            className={styles.input}
-            id="synonymInput"
-            placeholder="Enter a synonym"
-            type="text"
-            value={synonym}
-            onChange={(e) => {
-              setSynonym(e.target.value);
-              setErrors((prev) => ({ ...prev, synonym: [] }));
-            }}
-          />
-          {errors.synonym && (
-            <div className={styles.error}>{errors.synonym.join(", ")}</div>
-          )}
-        </div>
-        {errors.general && (
-          <div className={styles.error}>{errors.general.join(", ")}</div>
-        )}
+        <Input
+          errors={errors.word}
+          id="wordInput"
+          placeholder="Enter a word"
+          type="text"
+          value={word}
+          onChange={handleChangeWord}
+        />
+        <Input
+          errors={errors.synonym}
+          id="synonymInput"
+          placeholder="Enter a synonym"
+          type="text"
+          value={synonym}
+          onChange={handleChangeSynonym}
+        />
+        <Errors errors={errors.general} />
         <button
           className={styles.button}
           disabled={!word || !synonym}

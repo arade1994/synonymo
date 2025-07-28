@@ -28,10 +28,10 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
         class="_form_3ed661"
       >
         <div
-          class="_inputGroup_3ed661"
+          class="_inputContainer_18ce5e"
         >
           <input
-            class="_input_3ed661"
+            class="_input_18ce5e"
             id="wordInput"
             placeholder="Enter a word"
             type="text"
@@ -39,10 +39,10 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
           />
         </div>
         <div
-          class="_inputGroup_3ed661"
+          class="_inputContainer_18ce5e"
         >
           <input
-            class="_input_3ed661"
+            class="_input_18ce5e"
             id="synonymInput"
             placeholder="Enter a synonym"
             type="text"
