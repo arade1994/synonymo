@@ -96,6 +96,13 @@
         transform: translateY(0);
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
+
+      &:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
     }
   }
 }

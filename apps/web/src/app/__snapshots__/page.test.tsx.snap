@@ -29,7 +29,7 @@ exports[`HomePage > It should render and match a snapshot by default 1`] = `
         >
           <a
             class="_ctaButton_6b97ca"
-            href="/synonyms"
+            href="/synonyms/add"
             id="addSynonymsLink"
           >
             Add Synonyms

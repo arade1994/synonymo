@@ -85,7 +85,12 @@ export default function SynonymsPage() {
         {errors.general && (
           <div className={styles.error}>{errors.general.join(", ")}</div>
         )}
-        <button className={styles.button} id="addSynonymButton" type="submit">
+        <button
+          className={styles.button}
+          disabled={!word || !synonym}
+          id="addSynonymButton"
+          type="submit"
+        >
           Add Synonym
         </button>
       </form>
