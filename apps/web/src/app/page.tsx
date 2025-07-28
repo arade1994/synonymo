@@ -17,7 +17,7 @@ export default function Home() {
         <div className={styles.ctaContainer}>
           <Link
             className={styles.ctaButton}
-            href="/synonyms"
+            href="/synonyms/add"
             id="addSynonymsLink"
           >
             Add Synonyms

@@ -16,11 +16,37 @@ exports[`SearchSynonymsPage > It should render and match a snapshot by default 1
       <h1
         class="_title_8812a5"
       >
-        Search for Synonyms
+        Search 
+        <span
+          class="_highlight_8812a5"
+        >
+          for
+        </span>
+         Synonyms
       </h1>
-      <p>
-        Search functionality coming soon!
-      </p>
+      <form
+        class="_form_8812a5"
+      >
+        <div
+          class="_inputGroup_8812a5"
+        >
+          <input
+            class="_input_8812a5"
+            id="wordInput"
+            placeholder="Enter a word"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          class="_button_8812a5"
+          disabled=""
+          id="searchSynonymButton"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
     </main>
   </div>
 </body>

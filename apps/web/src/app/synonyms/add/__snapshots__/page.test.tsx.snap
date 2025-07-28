@@ -4,34 +4,34 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
 <body>
   <div>
     <main
-      class="_main_4ac91f"
+      class="_main_3ed661"
     >
       <a
-        class="_homeLink_4ac91f"
+        class="_homeLink_3ed661"
         href="/"
         id="homeLink"
       >
         ← Back to Home
       </a>
       <h1
-        class="_title_4ac91f"
+        class="_title_3ed661"
       >
         Add a 
         <span
-          class="_highlight_4ac91f"
+          class="_highlight_3ed661"
         >
           new
         </span>
          Synonym
       </h1>
       <form
-        class="_form_4ac91f"
+        class="_form_3ed661"
       >
         <div
-          class="_inputGroup_4ac91f"
+          class="_inputGroup_3ed661"
         >
           <input
-            class="_input_4ac91f"
+            class="_input_3ed661"
             id="wordInput"
             placeholder="Enter a word"
             type="text"
@@ -39,10 +39,10 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
           />
         </div>
         <div
-          class="_inputGroup_4ac91f"
+          class="_inputGroup_3ed661"
         >
           <input
-            class="_input_4ac91f"
+            class="_input_3ed661"
             id="synonymInput"
             placeholder="Enter a synonym"
             type="text"
@@ -50,7 +50,8 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
           />
         </div>
         <button
-          class="_button_4ac91f"
+          class="_button_3ed661"
+          disabled=""
           id="addSynonymButton"
           type="submit"
         >
