@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Errors > It should match a snapshot when rendered by default with errors 1`] = `
+<body>
+  <div>
+    <div
+      class="_error_b9420b"
+    >
+      test
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Errors > It should match a snapshot when rendered by default with no errors 1`] = `
+<body>
+  <div>
+    <div
+      class="_error_b9420b"
+    />
+  </div>
+</body>
+`;

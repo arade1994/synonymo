@@ -1,0 +1,22 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input > It should match a snapshot when rendered by default 1`] = `
+<body>
+  <div>
+    <div
+      class="_inputContainer_18ce5e"
+    >
+      <input
+        class="_input_18ce5e"
+        id="test"
+        placeholder="test"
+        type="text"
+        value="test"
+      />
+      <div
+        class="_error_b9420b"
+      />
+    </div>
+  </div>
+</body>
+`;
