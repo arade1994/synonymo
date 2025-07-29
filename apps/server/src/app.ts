@@ -1,6 +1,7 @@
 import { json } from "body-parser";
 import cors from "cors";
 import express, {
+  type Express,
   type NextFunction,
   type Request,
   type Response,
@@ -10,7 +11,7 @@ import synonymsRouter from "./routes/synonyms";
 import { NotFoundError } from "./utils/errors/NotFoundError";
 import { errorHandler } from "./utils/middlewares/errorHandler";
 
-const app = express();
+const app: Express = express();
 
 app.set("trust proxy", true);
 app.use(
