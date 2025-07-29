@@ -1,10 +1,15 @@
-import { type Request, type Response, Router } from "express";
+import {
+  type Request,
+  type Response,
+  type Router as ExpressRouter,
+  Router,
+} from "express";
 import { body, param } from "express-validator";
 
 import { SynonymGraph } from "../data/synoymGraph";
 import { validateRequest } from "../utils/middlewares/validateRequest";
 
-const router = Router();
+const router: ExpressRouter = Router();
 
 const graph = new SynonymGraph();
 
