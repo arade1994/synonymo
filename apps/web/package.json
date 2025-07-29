@@ -30,6 +30,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.32.0",
     "@next/eslint-plugin-next": "^15.4.4",
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/node": "^20",
