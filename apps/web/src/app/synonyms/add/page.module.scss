@@ -10,10 +10,15 @@
   background-color: #f0f4f8;
   font-family: "Poppins", sans-serif;
 
-  & .homeLink {
+  & .links {
     position: absolute;
     top: 2rem;
     left: 2rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  & .link {
     padding: 0.5rem 1rem;
     border-radius: 8px;
     background: #fff;

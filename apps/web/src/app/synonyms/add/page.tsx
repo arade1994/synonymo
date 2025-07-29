@@ -61,9 +61,18 @@ export default function SynonymsPage() {
 
   return (
     <main className={styles.main}>
-      <Link className={styles.homeLink} href="/" id="homeLink">
-        &larr; Back to Home
-      </Link>
+      <div className={styles.links}>
+        <Link className={styles.link} href="/" id="homeLink">
+          &larr; Back to Home
+        </Link>
+        <Link
+          className={styles.link}
+          href="/synonyms/search"
+          id="searchSynonymsLink"
+        >
+          Search Synonyms &rarr;
+        </Link>
+      </div>
       <h1 className={styles.title}>
         Add a <span className={styles.highlight}>new</span> Synonym
       </h1>
