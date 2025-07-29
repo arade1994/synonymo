@@ -1,5 +1,6 @@
 import { json } from "body-parser";
 import cors from "cors";
+import dotenv from "dotenv";
 import express, {
   type Express,
   type NextFunction,
@@ -11,12 +12,17 @@ import synonymsRouter from "./routes/synonyms";
 import { NotFoundError } from "./utils/errors/NotFoundError";
 import { errorHandler } from "./utils/middlewares/errorHandler";
 
+dotenv.config();
+
 const app: Express = express();
 
 app.set("trust proxy", true);
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin:
+      process.env.NODE_ENV === "production"
+        ? "https://synonymo.netlify.app"
+        : "http://localhost:3000",
     credentials: true,
   })
 );
