@@ -57,9 +57,14 @@ export default function SearchSynonymsPage() {
 
   return (
     <main className={styles.main}>
-      <Link className={styles.homeLink} href="/" id="homeLink">
-        &larr; Back to Home
-      </Link>
+      <div className={styles.links}>
+        <Link className={styles.link} href="/" id="homeLink">
+          &larr; Back to Home
+        </Link>
+        <Link className={styles.link} href="/synonyms/add" id="addSynonymsLink">
+          Add Synonyms &rarr;
+        </Link>
+      </div>
       <h1 className={styles.title}>
         Search <span className={styles.highlight}>for</span> Synonyms
       </h1>
