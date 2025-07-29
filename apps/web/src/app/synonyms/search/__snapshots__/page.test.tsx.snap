@@ -6,13 +6,24 @@ exports[`SearchSynonymsPage > It should render and match a snapshot by default 1
     <main
       class="_main_8812a5"
     >
-      <a
-        class="_homeLink_8812a5"
-        href="/"
-        id="homeLink"
+      <div
+        class="_links_8812a5"
       >
-        ← Back to Home
-      </a>
+        <a
+          class="_link_8812a5"
+          href="/"
+          id="homeLink"
+        >
+          ← Back to Home
+        </a>
+        <a
+          class="_link_8812a5"
+          href="/synonyms/add"
+          id="addSynonymsLink"
+        >
+          Add Synonyms →
+        </a>
+      </div>
       <h1
         class="_title_8812a5"
       >

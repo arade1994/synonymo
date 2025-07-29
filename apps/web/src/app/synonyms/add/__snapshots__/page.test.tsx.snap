@@ -6,13 +6,24 @@ exports[`SynonymsPage > It should render and match a snapshot by default 1`] = `
     <main
       class="_main_3ed661"
     >
-      <a
-        class="_homeLink_3ed661"
-        href="/"
-        id="homeLink"
+      <div
+        class="_links_3ed661"
       >
-        ← Back to Home
-      </a>
+        <a
+          class="_link_3ed661"
+          href="/"
+          id="homeLink"
+        >
+          ← Back to Home
+        </a>
+        <a
+          class="_link_3ed661"
+          href="/synonyms/search"
+          id="searchSynonymsLink"
+        >
+          Search Synonyms →
+        </a>
+      </div>
       <h1
         class="_title_3ed661"
       >
